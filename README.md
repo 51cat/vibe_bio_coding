@@ -81,6 +81,22 @@ agents/
 
 ---
 
+## 📦 安装
+
+```bash
+# 创建虚拟环境
+python -m venv venv
+source venv/bin/activate  # Windows: venv\Scripts\activate
+
+# 安装依赖
+pip install -r requirements.txt
+
+# 可选：安装生物信息工具
+conda install -c bioconda seqkit
+```
+
+---
+
 ## 📦 Agent 内部结构约定
 
 每个 Agent 目录遵循统一的文件结构：
@@ -97,13 +113,40 @@ agents/
 
 ## 🤖 现有 Agent
 
-### `format_transfer` — 生物信息文件格式转换 Agent
+### `format_transfer` — 文件格式转换 Agent
 
-负责将生物信息学相关文件在不同格式之间进行智能转换，例如：
+负责将生物信息学文件和表格文件在不同格式之间进行智能转换。
+
+#### 生物信息格式转换
 
 - FASTA ↔ FASTQ
 - VCF 格式解析与转换
 - BED / GFF / GTF 等注释格式互转
+
+#### 表格格式转换
+
+- CSV ↔ TSV
+- CSV ↔ Excel (.xlsx)
+- TSV ↔ Excel (.xlsx)
+- 查看Excel文件中的所有sheet名称
+
+#### 可用工具
+
+| 工具 | 功能 |
+|------|------|
+| `fastq2fasta` | FASTQ 转 FASTA |
+| `index_fasta` | 创建 FAI 索引 |
+| `csv_to_tsv` | CSV 转 TSV |
+| `tsv_to_csv` | TSV 转 CSV |
+| `csv_to_excel` | CSV 转 Excel |
+| `excel_to_csv` | Excel 转 CSV |
+| `tsv_to_excel` | TSV 转 Excel |
+| `excel_to_tsv` | Excel 转 TSV |
+| `convert_table_format` | 通用表格格式转换 |
+| `list_excel_sheets` | 列出 Excel 所有 sheet |
+| `create_output_dir` | 创建输出目录 |
+| `create_workdir` | 创建工作目录 |
+| `zip_directory` | 打包目录 |
 
 ---
 
