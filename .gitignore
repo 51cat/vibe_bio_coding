@@ -1,7 +1,3 @@
-# 配置文件（含敏感信息）
-agents/config_base.json
-agents/*/config.json
-
 # Python
 __pycache__/
 *.py[cod]

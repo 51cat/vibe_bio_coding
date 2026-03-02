@@ -2,7 +2,7 @@
     "llm": {
         "model": "glm-5",
         "temperature": 0.1,
-        "api_key": "your-api-key-here",
+        "api_key": "100d9623a5e042cca0a7c53a5d6f38e3.n8UHhVdriT3fOXeo",
         "base_url": "https://open.bigmodel.cn/api/paas/v4/"
     }
 }
